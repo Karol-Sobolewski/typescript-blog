@@ -45,8 +45,7 @@
       const articleID = article.getAttribute('id') as string | number;
 
       /* find elem that holds the title and retrieve it */
-      const articleTitle = article.querySelector(selectorTitle).innerHTML as string;
-
+      const articleTitle = (article.querySelector(selectorTitle) as HTMLElement).innerHTML as string;
       /* create HTML of the link */
       const linkHTML = '<li><a href="#' + articleID + '"><span>' + articleTitle + '</span></a></li>' as string;
 
